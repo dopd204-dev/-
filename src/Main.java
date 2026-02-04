@@ -1,20 +1,15 @@
 
 public static void main(String[] args) {
-    Student student = new Student();
-    student.name = "Бека";
-    student.age = 17;
-    student.university = "КНУ";
-    student.gpa = 3.8;
+    Programmer programmer =
+            new Programmer("Бека", "Java Developer", "Google");
 
-    Teacher teacher = new Teacher();
-    teacher.name = "Мурат";
-    teacher.age = 45;
-    teacher.subject = "Математика";
-    teacher.experience = 20;
+    Dancer dancer =
+            new Dancer("Ainura", "Professional Dancer", "Kyrgyz Group");
 
-    System.out.println("=== Student Info ===");
-    student.showStudentInfo();
+    Singer singer =
+            new Singer("Бексултан", "Rock Singer", "RockStars");
 
-    System.out.println("\n=== Teacher Info ===");
-    teacher.showTeacherInfo();
+    System.out.println(programmer.toString());
+    System.out.println(dancer.toString());
+    System.out.println(singer.toString());
 }
