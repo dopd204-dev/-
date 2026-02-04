@@ -1,15 +1,10 @@
 
 public static void main(String[] args) {
-    Programmer programmer =
-            new Programmer("Бека", "Java Developer", "Google");
+    Delivery courier = new CourierDelivery(3);
+    Delivery drone = new DroneDelivery(10);
+    Delivery truck = new TruckDelivery(100);
 
-    Dancer dancer =
-            new Dancer("Ainura", "Professional Dancer", "Kyrgyz Group");
-
-    Singer singer =
-            new Singer("Бексултан", "Rock Singer", "RockStars");
-
-    System.out.println(programmer.toString());
-    System.out.println(dancer.toString());
-    System.out.println(singer.toString());
+    System.out.println("Курьер: " + courier.calculatePrice());
+    System.out.println("Дрон: " + drone.calculatePrice());
+    System.out.println("Грузовик: " + truck.calculatePrice());
 }
