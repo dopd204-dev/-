@@ -1,10 +1,17 @@
 
 public static void main(String[] args) {
-    Delivery courier = new CourierDelivery(3);
-    Delivery drone = new DroneDelivery(10);
-    Delivery truck = new TruckDelivery(100);
+    Country c1 = new Country("Кыргызстан",7000000,199951,"Кыргыз тили");
+    Country c2 = new Country("Казакстан", 19000000, 2724900, "Казак тили");
+    Country c3 = new Country("Өзбекстан", 36000000, 448924, "Өзбек тили");
 
-    System.out.println("Курьер: " + courier.calculatePrice());
-    System.out.println("Дрон: " + drone.calculatePrice());
-    System.out.println("Грузовик: " + truck.calculatePrice());
+    Country[] countries = {c1, c2, c3};
+
+    Country largest = Country.findLargestCountry(countries);
+
+    System.out.println("Аянты боюнча эн чон олко ");
+    System.out.println("Аты: " + largest.name);
+    System.out.println("Аянты: " + largest.area);
+    System.out.println("Калкы: " + largest.population);
+    System.out.println("Тили: " + largest.language);
+
 }
